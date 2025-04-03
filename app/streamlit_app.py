@@ -12,7 +12,7 @@ from predict_model import load_model, predict_image
 st.set_page_config(page_title="Tri de Prunes 🍑", layout="centered")
 
 st.title("🍑 JCIA Hackathon – Tri Automatique des Prunes")
-st.markdown("Charge une image de prune pour obtenir sa catégorie prédite par le modèle IA.")
+st.markdown("Charge une image de prune pour obtenir sa catégorie prédite par le modèle IA. Cette application est developpée par ZEBS HAUPUR de la Communauté NGcodeX. contacter moi au +237692077005")
 
 # Upload image
 uploaded_file = st.file_uploader("📤 Choisis une image", type=["jpg", "jpeg", "png"])
