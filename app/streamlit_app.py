@@ -1,4 +1,8 @@
 import sys
+import torch
+if hasattr(torch, 'classes'):
+    del torch.classes
+import sys
 import os
 sys.path.append(os.path.abspath("src"))
 import streamlit as st
