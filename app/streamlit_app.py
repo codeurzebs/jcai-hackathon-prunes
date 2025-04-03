@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath("src"))
 import streamlit as st
 from PIL import Image
 from predict_model import load_model, predict_image
