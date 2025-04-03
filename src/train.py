@@ -1,36 +1,66 @@
+import os
 import torch
 from torch import nn, optim
-from src.model import PlumClassifier
-from src.dataset import get_dataloaders
+from torchvision import datasets, transforms, models
+from torch.utils.data import DataLoader
 
+# 🔧 Configuration
+DATA_DIR = "data/processed"
+BATCH_SIZE = 32
+IMG_SIZE = 224
+NUM_EPOCHS = 10
+LEARNING_RATE = 0.001
+MODEL_PATH = "models/plum_model.pth"
+
+# 🖥️ Device (GPU ou CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"💻 Utilisation de : {device}")
 
-# Paramètres
-data_dir = "data/processed"
-num_classes = 6
-epochs = 10
-lr = 0.001
+# 📦 Transforms
+transform = transforms.Compose([
+    transforms.Resize((IMG_SIZE, IMG_SIZE)),
+    transforms.ToTensor()
+])
 
-# Load data
-train_loader, val_loader, classes = get_dataloaders(data_dir)
-model = PlumClassifier(num_classes).to(device)
+# 📂 Chargement des données
+train_dataset = datasets.ImageFolder(os.path.join(DATA_DIR, "train"), transform=transform)
+val_dataset = datasets.ImageFolder(os.path.join(DATA_DIR, "val"), transform=transform)
+
+train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
+val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE)
+
+# 🔢 Nombre de classes
+num_classes = len(train_dataset.classes)
+print(f"📊 Classes détectées : {train_dataset.classes} ({num_classes})")
+
+# 🧠 Modèle simple (ResNet18 pré-entraîné)
+model = models.resnet18(pretrained=True)
+model.fc = nn.Linear(model.fc.in_features, num_classes)
+model = model.to(device)
+
+# 🎯 Fonction de perte & Optimiseur
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=lr)
+optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
-# Entraînement
-for epoch in range(epochs):
+# 🔁 Entraînement
+for epoch in range(NUM_EPOCHS):
     model.train()
     running_loss = 0.0
+
     for images, labels in train_loader:
         images, labels = images.to(device), labels.to(device)
+
         optimizer.zero_grad()
         outputs = model(images)
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
+
         running_loss += loss.item()
 
-    print(f"[{epoch+1}/{epochs}] Loss: {running_loss:.4f}")
+    print(f"📈 Epoch [{epoch+1}/{NUM_EPOCHS}] - Loss: {running_loss:.4f}")
 
-# Sauvegarder le modèle
-torch.save(model.state_dict(), "models/plum_model.pth")
+# 💾 Sauvegarde du modèle
+os.makedirs("models", exist_ok=True)
+torch.save(model.state_dict(), MODEL_PATH)
+print(f"\n✅ Modèle sauvegardé dans {MODEL_PATH}")
