@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from src.predict_model import load_model, predict_image
+from predict_model import load_model, predict_image
 
 st.set_page_config(page_title="Tri de Prunes 🍑", layout="centered")
 
