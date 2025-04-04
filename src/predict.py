@@ -1,3 +1,14 @@
+# ===============================================================
+# JCIA HACKATHON 2025 - TRI INTELLIGENT DES PRUNES AFRICAINES 🍑
+# Auteurs : ZEBS HAUPUR & TIOJIO ROMAIN
+# Description : Projet d’IA pour la classification automatique
+#               des prunes selon leur qualité visuelle.
+# Technologies : PyTorch | Streamlit | Azure ML | Python
+# GitHub : https://github.com/NGcodeX/jcai-hackathon-prunes
+# Tel: +237692077005
+# Communauté: NGcodeX
+# ===============================================================
+
 import os
 import torch
 from torchvision import transforms, models
@@ -8,7 +19,7 @@ MODEL_PATH = "models/plum_model.pth"
 IMG_SIZE = 224
 CLASS_NAMES = ['bruised', 'cracked', 'rotten', 'spotted', 'unaffected', 'unripe']
 
-# 📦 Préparation de l'image
+#  Préparation de l'image
 def load_image(image_path):
     transform = transforms.Compose([
         transforms.Resize((IMG_SIZE, IMG_SIZE)),
@@ -17,7 +28,7 @@ def load_image(image_path):
     image = Image.open(image_path).convert("RGB")
     return transform(image).unsqueeze(0)  # ajout d'une dimension batch
 
-# 🧠 Charger le modèle
+#  Charger le modèle
 def load_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = models.resnet18()
@@ -27,7 +38,7 @@ def load_model():
     model.eval()
     return model, device
 
-# 🔮 Prédiction
+#  Prédiction
 def predict(image_path):
     image_tensor = load_image(image_path)
     model, device = load_model()
@@ -41,7 +52,7 @@ def predict(image_path):
     print(f"🖼️ Image : {os.path.basename(image_path)}")
     print(f"🔮 Prédiction : {predicted_class}")
 
-# 🏁 Exemple d'utilisation
+# 🏁 test d'utilisation
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
@@ -52,3 +63,15 @@ if __name__ == "__main__":
         print("❌ Le fichier image n'existe pas.")
     else:
         predict(args.image)
+
+
+# ===============================================================
+# JCIA HACKATHON 2025 - TRI INTELLIGENT DES PRUNES AFRICAINES 🍑
+# Auteurs : ZEBS HAUPUR & TIOJIO ROMAIN
+# Description : Projet d’IA pour la classification automatique
+#               des prunes selon leur qualité visuelle.
+# Technologies : PyTorch | Streamlit | Azure ML | Python
+# GitHub : https://github.com/NGcodeX/jcai-hackathon-prunes
+# Tel: +237692077005
+# Communauté: NGcodeX
+# ===============================================================

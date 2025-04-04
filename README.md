@@ -1,12 +1,12 @@
 # 🟣 JCIA Hackathon 2025 – Tri Automatique des Prunes 🍑
 
 Developpé par: NGcodeX
+Membre: ZEBS HAUPUR ET TIOJIO ROMAIN
+###  ---------------  [Video de presentation du projet](https://www.linkedin.com/posts/pilotezebs_ai-hackathon-agritech-activity-7313961120547954688-a-UO)  -------------------
+![image](image-azureml/jupiterrrrr.png)
 
-President: ZEBS HAUPUR
+Bienvenue dans notre projet NGcodeX de classification automatique des prunes, réalisé dans le cadre du **JCIA Hackathon 2025** organisé au Cameroun. Ce projet a été développé dans le cadre du JCIA Hackathon 2025. Il a pour objectif de proposer une solution basée sur l’intelligence artificielle pour automatiser le tri des prunes africaines selon leur qualité visuelle. En utilisant un modèle ResNet18 entraîné avec PyTorch, notre système est capable de reconnaître 6 classes de prunes : meurtrie (bruised), fissurée (cracked), pourrie (rotten), tachetée (spotted), bonne (unaffected) et non mûre (unripe). Le modèle a été entraîné sur Azure Machine Learning Studio, évalué, puis intégré dans une application web développée avec Streamlit. L’utilisateur peut simplement téléverser une image de prune et recevoir instantanément la prédiction du modèle. Ce projet met en valeur l'utilisation concrète de l’IA pour répondre à un besoin du secteur agricole africain, tout en restant accessible, reproductible et open source.
 
-Equipe: 
-
-Bienvenue dans notre projet NGcodeX de classification automatique des prunes, réalisé dans le cadre du **JCIA Hackathon 2025** organisé au Cameroun.
 
 Ce projet utilise des techniques avancées de **vision par ordinateur** et **d'apprentissage profond** pour trier des prunes africaines en six catégories de qualité :
 
@@ -16,6 +16,8 @@ Ce projet utilise des techniques avancées de **vision par ordinateur** et **d'a
 - ⚡ Fissurée  
 - 💔 Meurtrie  
 - ❌ Pourrie
+
+  ![image](image-azureml/fghfg.png)
 
 ---
 
@@ -31,7 +33,6 @@ Développer un modèle d'intelligence artificielle performant capable de **class
 - **Frameworks** : PyTorch / TensorFlow  
 - **Outils Cloud** : Microsoft Azure (Azure Machine Learning, Azure Storage, Custom Vision)  
 - **Librairies** : OpenCV, scikit-learn, matplotlib, pandas, numpy  
-- **IA générative** : ChatGPT pour rédaction et documentation
 
 ---
 
@@ -47,14 +48,10 @@ Notre solution suit cette architecture :
 
 ---
 
-## 📁 Arborescence du projet
-
-
-
-
----
-
 ## 🚀 Lancer le projet
+
+![image](image-azureml/raw%20dataset.png)
+
 
 ```bash
 # Cloner le dépôt
