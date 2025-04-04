@@ -48,14 +48,10 @@ Notre solution suit cette architecture :
 
 ---
 
-## 📁 Arborescence du projet
-
-
-
-
----
-
 ## 🚀 Lancer le projet
+
+![image](image-azureml/raw%20dataset.png)
+
 
 ```bash
 # Cloner le dépôt
