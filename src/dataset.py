@@ -1,3 +1,15 @@
+# ===============================================================
+# JCIA HACKATHON 2025 - TRI INTELLIGENT DES PRUNES AFRICAINES 🍑
+# Auteurs : ZEBS HAUPUR & TIOJIO ROMAIN
+# Description : Projet d’IA pour la classification automatique
+#               des prunes selon leur qualité visuelle.
+# Technologies : PyTorch | Streamlit | Azure ML | Python
+# GitHub : https://github.com/NGcodeX/jcai-hackathon-prunes
+# Tel: +237692077005
+# Communauté: NGcodeX
+# ===============================================================
+
+
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import os
@@ -18,3 +30,15 @@ def get_dataloaders(data_dir, batch_size=32, img_size=224):
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
     return train_loader, val_loader, train_dataset.classes
+
+
+# ===============================================================
+# JCIA HACKATHON 2025 - TRI INTELLIGENT DES PRUNES AFRICAINES 🍑
+# Auteurs : ZEBS HAUPUR & TIOJIO ROMAIN
+# Description : Projet d’IA pour la classification automatique
+#               des prunes selon leur qualité visuelle.
+# Technologies : PyTorch | Streamlit | Azure ML | Python
+# GitHub : https://github.com/NGcodeX/jcai-hackathon-prunes
+# Tel: +237692077005
+# Communauté: NGcodeX
+# ===============================================================
