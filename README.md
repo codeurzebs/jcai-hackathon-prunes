@@ -2,7 +2,7 @@
 
 Developpé par: NGcodeX
 Membre: ZEBS HAUPUR ET TIOJIO ROMAIN
-
+###  ---------------  [Video de presentation du projet](https://www.linkedin.com/posts/pilotezebs_ai-hackathon-agritech-activity-7313961120547954688-a-UO)  -------------------
 ![image](image-azureml/jupiterrrrr.png)
 
 Bienvenue dans notre projet NGcodeX de classification automatique des prunes, réalisé dans le cadre du **JCIA Hackathon 2025** organisé au Cameroun. Ce projet a été développé dans le cadre du JCIA Hackathon 2025. Il a pour objectif de proposer une solution basée sur l’intelligence artificielle pour automatiser le tri des prunes africaines selon leur qualité visuelle. En utilisant un modèle ResNet18 entraîné avec PyTorch, notre système est capable de reconnaître 6 classes de prunes : meurtrie (bruised), fissurée (cracked), pourrie (rotten), tachetée (spotted), bonne (unaffected) et non mûre (unripe). Le modèle a été entraîné sur Azure Machine Learning Studio, évalué, puis intégré dans une application web développée avec Streamlit. L’utilisateur peut simplement téléverser une image de prune et recevoir instantanément la prédiction du modèle. Ce projet met en valeur l'utilisation concrète de l’IA pour répondre à un besoin du secteur agricole africain, tout en restant accessible, reproductible et open source.
