@@ -22,7 +22,7 @@ from predict_model import load_model, predict_image
 
 st.set_page_config(page_title="Tri de Prunes 🍑", layout="centered")
 
-st.title("🍑 JCIA Hackathon – Tri Automatique des Prunes")
+st.title("🍑 JCIA Hackathon – Tri Automatique des Prunes (Ouvrir sur PC)")
 st.markdown("Charge une image de prune pour obtenir sa catégorie prédite par le modèle IA. \n \n Cette application est developpée par ZEBS HAUPUR et TIOJIO ROMAIN de la Communauté NGcodeX. \n \n Contact au +237692077005 (WhatsApp + Orange Money). \n Numero de compte Afriland First Bank: 08281371051. \n \n NB:Par defaut, les images qui ne sont pas des prunes seront classé comme pourrie.")
 
 # Upload image
